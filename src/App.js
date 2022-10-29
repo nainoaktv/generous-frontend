@@ -4,6 +4,7 @@ import { Route, Switch, Redirect, BrowserRouter as Router } from 'react-router-d
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 
+
 // CSS
 import './App.css';
 
@@ -15,6 +16,7 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
+
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');
