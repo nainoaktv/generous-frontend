@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import './Carousel.css';
 
-export default function ControlledCarousel() {
-  const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
+function HomeCarousel() {
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=373940"
+          className="d-block"
+          style={{height: '300px', width: '300px'}}
+          src={ require('../images/miniaussie.jpeg').default }
           alt="First slide"
         />
         <Carousel.Caption>
@@ -23,8 +20,9 @@ export default function ControlledCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
+          className="d-block"
+          style={{height: '300px', width: '300px'}}
+          src={ require('../images/miniaussie.jpeg').default }
           alt="Second slide"
         />
 
@@ -35,8 +33,9 @@ export default function ControlledCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          className="d-block"
+          style={{height: '300px', width: '300px'}}
+          src={ require('../images/miniaussie.jpeg').default }
           alt="Third slide"
         />
 
@@ -51,4 +50,4 @@ export default function ControlledCarousel() {
   );
 }
 
-render(<ControlledCarousel />);
+export default HomeCarousel; 
