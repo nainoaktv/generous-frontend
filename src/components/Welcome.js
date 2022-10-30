@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import ControlledCarousel from './Carousel';
+import HomeCarousel from './Carousel';
 
 const Welcome = () => {
   return (
     <div>
-      <ControlledCarousel />
+      <HomeCarousel />
     </div>
   )
 }
