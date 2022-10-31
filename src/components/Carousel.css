@@ -1,7 +1,9 @@
-body {
+.carousel {
   background: black;
+  border: solid 5px black;
+  border-radius: 4px;
 }
 
-p {
-  color: black;
+.carouselText{
+  color: white;
 }

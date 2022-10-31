@@ -5,42 +5,42 @@ import './Carousel.css';
 
 function HomeCarousel() {
   return (
-    <Carousel>
+    <Carousel className='carousel'>
       <Carousel.Item>
         <img
           className="d-block"
-          style={{height: '300px', width: '300px'}}
+          style={{height: 'auto', width: '100%',}}
           src={ require('../images/miniaussie.jpeg').default }
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <Carousel.Caption className="carouselText">
+          <h3>Welcome to Generous</h3>
+          <p>Some filler text</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block"
-          style={{height: '300px', width: '300px'}}
+          style={{height: 'auto', width: '100%',}}
           src={ require('../images/miniaussie.jpeg').default }
           alt="Second slide"
         />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
+        <Carousel.Caption className="carouselText">
+          <h3>Donate</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block"
-          style={{height: '300px', width: '300px'}}
+          style={{height: 'auto', width: '100%',}}
           src={ require('../images/miniaussie.jpeg').default }
           alt="Third slide"
         />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
+        <Carousel.Caption className="carouselText">
+          <h3>Search for local Charities</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
