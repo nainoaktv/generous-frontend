@@ -6,12 +6,18 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+<<<<<<< HEAD
     "axios": "^0.21.4",
     "cors": "^2.8.5",
+=======
+    "axios": "^0.21.0",
+    "bootstrap": "^5.2.2",
+>>>>>>> cf5267e197a2152dc107990a12d33dff4c8aab88
     "dotenv": "^8.2.0",
     "jwt-decode": "^3.1.2",
     "postcss": "^8.4.18",
     "react": "^17.0.1",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",

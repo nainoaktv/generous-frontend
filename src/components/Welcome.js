@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import HomeCarousel from './Carousel';
 
 const Welcome = () => {
-    return (
-        <div>
-            <h1>MERN Authentication</h1>
-            <p>Welcome to my app.</p>
-        </div>
-    )
+  return (
+    <div>
+      <HomeCarousel />
+    </div>
+  )
 }
 
 export default Welcome;

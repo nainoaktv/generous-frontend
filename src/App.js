@@ -5,7 +5,10 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cf5267e197a2152dc107990a12d33dff4c8aab88
 // CSS
 import './App.css';
 
@@ -18,10 +21,13 @@ import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 
+<<<<<<< HEAD
 const axios = require('axios')
 const apiKey = process.env.API_KEY;
 const cors = require('cors')
 
+=======
+>>>>>>> cf5267e197a2152dc107990a12d33dff4c8aab88
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');

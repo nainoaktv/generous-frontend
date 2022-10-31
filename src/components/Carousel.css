@@ -1,0 +1,9 @@
+.carousel {
+  background: black;
+  border: solid 5px black;
+  border-radius: 4px;
+}
+
+.carouselText{
+  color: white;
+}
