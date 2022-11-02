@@ -9,7 +9,10 @@ function HomeCarousel() {
       <Carousel.Item>
         <img
           className="d-block"
+          // Adjust image size to fit Carousel
+          // Other styling in CSS file
           style={{height: 'auto', width: '100%',}}
+          // Must use { require('logo route').default } to display image in browser 
           src={ require('../images/miniaussie.jpeg').default }
           alt="First slide"
         />
