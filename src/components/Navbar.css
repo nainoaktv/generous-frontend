@@ -1,49 +1,82 @@
-/* The side navigation menu */
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.navbar {
+  background-color: #010002;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+  transition: color 0.3s;
+}
+.menu-bars a:hover {
+  color: #AF2C02;
+  z-index: 99;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
+.nav-menu {
+  background-color: #010002;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  z-index: 100;
+  justify-content: center;
+  position: fixed;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  left: -100%;
+  transition: 850ms;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
+.nav-menu.active {
+ left: 0;
+ transition: 350ms;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 23px;
+  font-family: 'Caveat', cursive;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+  transition: color 0.3s;
+}
+
+.nav-text a:hover {
+  color: #DAA520;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #010002;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+span {
+  margin-left: 16px;
 }
