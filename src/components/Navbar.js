@@ -15,19 +15,25 @@ const Navbar = (props) => {
 
   return (
     <div>
-      <IconContext.Provider value={{ color: 'DAA520' }}>
+
+      <IconContext.Provider value={{ className: 'openMenu' }} >
         <div className='navbar'>
           <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSideBar} id='openMenu' />
+            <FaIcons.FaBars onClick={showSideBar} />
           </Link>
         </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' onClick={showSideBar}>
-            <li className='navbar-toggle'>
+      </IconContext.Provider>
+
+      <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+        <ul className='nav-menu-items' onClick={showSideBar}>
+          <li className='navbar-toggle'>
+            <IconContext.Provider value={{ className: 'closeMenu' }} >
               <Link to='#' className='menu-bars'>
                 <AiIcons.AiOutlineClose id='closeMenu' />
               </Link>
-            </li>
+            </IconContext.Provider>
+          </li>
+          <IconContext.Provider value={{ color: '#DAA520' }} >
             {NavbarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
@@ -38,9 +44,9 @@ const Navbar = (props) => {
                 </li>
               )
             })}
-          </ul>
-        </nav>
-      </IconContext.Provider>
+          </IconContext.Provider>
+        </ul>
+      </nav>
     </div>
   );
 }
