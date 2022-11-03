@@ -14,10 +14,6 @@
   background: none;
   transition: color 0.3s;
 }
-.menu-bars:hover {
-  color: #AF2C02;
-  z-index: 100;
-}
 
 .openMenu {
   color: #DAA520; 
