@@ -13,6 +13,12 @@ export const NavbarData = [
     cName: 'nav-text'
   },
   {
+    title: 'Non-profits',
+    path: '/nonprofit',
+    icon: <FaIcons.FaRibbon />,
+    cName: 'nav-text'
+  },
+  {
     title: 'Profile',
     path: '/profile',
     icon: <BsIcons.BsFillPersonFill />,
