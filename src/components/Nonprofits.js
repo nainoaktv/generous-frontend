@@ -1,13 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 const Nonprofits = () => {
-    return (
-        <footer className="footer bg-dark">
-            <div className="container text-center">
-                <span className="text-muted">@2022 Built by SEI 621</span>
-            </div>
-        </footer>
-    )
+
+  const [nonprofit, setNonProfit] = useState('');
+
+  const handleChange = (event) => {
+    setNonProfit(event.target.value);
+    console.log(`Searched Nonprofit: ${nonprofit}`)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`results for nonprofit: ${nonprofit}`);
+  }
+
+  return (
+    <div>
+      <form>
+        <p>
+          {/* DISPLAY NON PROFIT DATA HERE */}
+        </p>
+        <label>
+          Enter nonprofit you would like to search:
+          <input type="text" onChange={handleChange} value={nonprofit} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  )
 }
 
 export default Nonprofits;
