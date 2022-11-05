@@ -5,7 +5,7 @@ import './Welcome.css';
 const Welcome = () => {
   return (
     <div>
-      <img className='genLogo' src={ require('../images/genlogo.png').default } />
+      <img className='genLogo' src={ require('../images/genlogo.png').default } alt='Generous Logo' />
       <HomeCarousel />
     </div>
   )

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { IconContext } from "react-icons";
-import { NavbarData } from './NavbarData';
+import { authNavbarData, noAuthNavbarData } from './NavbarData';
 import './Navbar.css';
 
 const Navbar = (props) => {
@@ -15,9 +15,11 @@ const Navbar = (props) => {
 
   return (
     <div>
-
       <IconContext.Provider value={{ className: 'openMenu' }} >
         <div className='navbar'>
+          <Link className="navbar-brand" to="/">
+            <img className='genNavLogo' src={require('../images/genlogo.png').default} alt='Generous Logo' />
+          </Link>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSideBar} />
           </Link>
@@ -33,18 +35,33 @@ const Navbar = (props) => {
               </Link>
             </IconContext.Provider>
           </li>
-          <IconContext.Provider value={{ color: '#DAA520' }} >
-            {NavbarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
-                </li>
-              )
-            })}
-          </IconContext.Provider>
+          {
+            props.isAuth
+              ? <IconContext.Provider value={{ color: '#DAA520' }} >
+                {authNavbarData.map((item, index) => {
+                  return (
+                    <li key={index} className={item.cName}>
+                      <Link to={item.path}>
+                        {item.icon}
+                        <span>{item.title}</span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </IconContext.Provider>
+              : <IconContext.Provider value={{ color: '#DAA520' }} >
+                {noAuthNavbarData.map((item, index) => {
+                  return (
+                    <li key={index} className={item.cName}>
+                      <Link to={item.path}>
+                        {item.icon}
+                        <span>{item.title}</span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </IconContext.Provider>
+          }
         </ul>
       </nav>
     </div>

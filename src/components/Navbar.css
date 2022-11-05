@@ -96,3 +96,10 @@
 span {
   margin-left: 16px;
 }
+
+.genNavLogo {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  max-width: 150px;
+}
