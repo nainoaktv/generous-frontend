@@ -11,7 +11,7 @@ function HomeCarousel() {
         <img
           className="d-block"
           style={{height: 'auto', width: '100%',}}
-          src={ require('../images/miniaussie.jpeg').default }
+          src={ require('../images/miniaussie.jpeg') }
           alt="First slide"
         />
         <Carousel.Caption className="carouselText">
@@ -23,7 +23,7 @@ function HomeCarousel() {
         <img
           className="d-block"
           style={{height: 'auto', width: '100%',}}
-          src={ require('../images/miniaussie.jpeg').default }
+          src={ require('../images/miniaussie.jpeg') }
           alt="Second slide"
         />
 
@@ -36,7 +36,7 @@ function HomeCarousel() {
         <img
           className="d-block"
           style={{height: 'auto', width: '100%',}}
-          src={ require('../images/miniaussie.jpeg').default }
+          src={ require('../images/miniaussie.jpeg') }
           alt="Third slide"
         />
 

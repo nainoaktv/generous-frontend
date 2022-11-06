@@ -18,7 +18,7 @@ const Navbar = (props) => {
       <IconContext.Provider value={{ className: 'openMenu' }} >
         <div className='navbar'>
           <Link className="navbar-brand" to="/">
-            <img className='genNavLogo' src={require('../images/genlogo.png').default} alt='Generous Logo' />
+            <img className='genNavLogo' src={require('../images/genlogo.png')} alt='Generous Logo' />
           </Link>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSideBar} />

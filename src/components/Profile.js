@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Profile.css';
 
 const Profile = (props) => {
    const { handleLogout, user } = props;
@@ -16,8 +17,10 @@ const Profile = (props) => {
    const userData = user ?
    (<div>
        <h1>Hey! {name}</h1>
+       <h2>Contact Information</h2>
        <p>Email: {email}</p>
-       <p>ID: {id}</p>
+       <h2>My Non-Profits</h2>
+       {/* Display user non-profits here */}
    </div>) : <h2>Loading...</h2>
 
     const errorDiv = () => {
