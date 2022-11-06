@@ -48,6 +48,10 @@ const Navbar = (props) => {
                     </li>
                   )
                 })}
+                <div onClick={props.handleLogout} className='logoutBtn'>
+                  <AiIcons.AiOutlineLogout />
+                  <h3>Logout</h3>
+                </div>
               </IconContext.Provider>
               : <IconContext.Provider value={{ color: '#DAA520' }} >
                 {noAuthNavbarData.map((item, index) => {
