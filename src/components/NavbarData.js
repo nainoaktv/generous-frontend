@@ -60,13 +60,13 @@ export const noAuthNavbarData = [
   {
     title: 'Login',
     path: '/login',
-    icon: <BsIcons.BsInfoSquareFill />,
+    icon: <AiIcons.AiOutlineLogin />,
     cName: 'nav-text'
   },
   {
     title: 'Sign Up',
     path: '/signup',
-    icon: <BsIcons.BsInfoSquareFill />,
+    icon: <FaIcons.FaPen />,
     cName: 'nav-text'
   },
   {
