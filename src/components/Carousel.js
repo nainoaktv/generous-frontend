@@ -10,11 +10,8 @@ function HomeCarousel() {
       <Carousel.Item>
         <img
           className="d-block"
-          // Adjust image size to fit Carousel
-          // Other styling in CSS file
           style={{height: 'auto', width: '100%',}}
-          // Must use { require('logo route').default } to display image in browser 
-          src={ require('../images/miniaussie.jpeg').default }
+          src={ require('../images/miniaussie.jpeg') }
           alt="First slide"
         />
         <Carousel.Caption className="carouselText">
@@ -26,7 +23,7 @@ function HomeCarousel() {
         <img
           className="d-block"
           style={{height: 'auto', width: '100%',}}
-          src={ require('../images/miniaussie.jpeg').default }
+          src={ require('../images/miniaussie.jpeg') }
           alt="Second slide"
         />
 
@@ -39,7 +36,7 @@ function HomeCarousel() {
         <img
           className="d-block"
           style={{height: 'auto', width: '100%',}}
-          src={ require('../images/miniaussie.jpeg').default }
+          src={ require('../images/miniaussie.jpeg') }
           alt="Third slide"
         />
 

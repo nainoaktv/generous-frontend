@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 
-const Nonprofits = () => {
+function Nonprofits(props) {
 
   const [nonprofit, setNonProfit] = useState('');
 
-  const handleChange = (event) => {
-    setNonProfit(event.target.value);
+  const handleChange = (e) => {
+    setNonProfit(e.target.value);
     console.log(`Searched Nonprofit: ${nonprofit}`)
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(`results for nonprofit: ${nonprofit}`);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Use axios here to hit API
+    axios.get('')
   }
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <p>
           {/* DISPLAY NON PROFIT DATA HERE */}
         </p>
