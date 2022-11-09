@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 .carousel {
   background: black;
   border: solid 5px black;
@@ -6,4 +8,7 @@
 
 .carouselText{
   color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px black;
+  font-family: 'Open Sans', sans-serif
 }

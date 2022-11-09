@@ -109,8 +109,8 @@ span {
   display: inline-flex;
   color: white;
   font-family: 'Caveat', cursive;
-  left: 0px;
-  top: 800px;
+  left: 25px;
+  top: 50px;
   cursor: pointer;
   text-align: center;
   font-size: 30px;
