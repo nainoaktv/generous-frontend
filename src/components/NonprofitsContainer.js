@@ -44,7 +44,7 @@ function NonprofitsContainer() {
   }
 
   return (
-    <div className="App">
+    <div>
       <div className="Header">
         <h2>NonProfit Search</h2>
       </div>
