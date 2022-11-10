@@ -14,7 +14,7 @@ export const authNavbarData = [
   },
   {
     title: 'Non-Profits',
-    path: '/nonprofits',
+    path: '/nonprofits/results',
     icon: <FaIcons.FaHands />,
     cName: 'nav-text'
   },

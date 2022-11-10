@@ -1,50 +1,37 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Nonprofits from './Nonprofits';
+const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
+const token = process.env.token;
 
 function NonprofitsContainer(props) {
 
-  const [nonprofit, setNonProfit] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [nonprofit, setNonProfit] = useState([]);
+  // const [searchTerm, setSearchTerm] = useState('');
   
+  useEffect(() => {
+    axios.get(`${REACT_APP_SERVER_URL}/nonprofits/results`, {
+        Authorization: `Bearer ${token}`,
+    })
+    .then(response => {
+        setNonProfit(response.data.nonprofits);
+    })
+    .catch(error => console.log(error));
+}, [])
 
-  const handleChange = (e) => {
-    setSearchTerm(e.target.value);
-    console.log(`Searched Nonprofit: ${searchTerm}`)
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Use axios here to hit API
-    console.log(e.target)
-    let databody = {
-      search: searchTerm,
+const renderNonProfit = () => {
+    if (nonprofit.length) {
+        let nonProfitsArray = nonprofit.map((np, idx) => <Nonprofits nonProfitsName={np.name} nonProfitsDesc={np.desription} key={idx} />)
+        return nonProfitsArray
+    } else {
+        return <h1>There are no Non-Profits</h1>
     }
-
-    return axios.post(`${REACT_SERVER_APP}/nonprofits/results`, {
-      body: databody,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    })
-    .then(nonProfitResponse => searchTerm.data.response(nonProfitResponse.data.response))
-    .then(data=>console.log(data))
-    .catch(err => {
-      console.log(`error: ${err}`)
-    })
-  }
+}
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <p>
-          {}
-        </p>
-        <label>
-          Enter nonprofit you would like to search:
-          <input type="text" onChange={handleChange} value={searchTerm} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+      <h1>NonProfits</h1>
+      {renderNonProfit()}
     </div>
   )
 }

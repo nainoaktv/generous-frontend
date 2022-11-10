@@ -4,7 +4,9 @@ function Nonprofits(props) {
 
     return (
         <div>
-            {/* <h2>show nonprofit container states here</h2> */}
+            <h1>{props.nonProfitsName}</h1>
+            <p>{props.nonProfitsDesc}</p>
+ 
         </div>
     )
 }
