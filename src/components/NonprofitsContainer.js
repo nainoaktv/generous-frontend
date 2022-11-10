@@ -20,7 +20,7 @@ function NonprofitsContainer() {
   }
 
   function setNewSearch(newSearchValue) {
-    fetch(`https://partners.every.org/v0.2/search/${newSearchValue}?apiKey=${apiKey}`)
+    axios.get(`https://partners.every.org/v0.2/search/${newSearchValue}?apiKey=${apiKey}`)
     .then(handleResult)
     .then(handleData);
   }
@@ -42,7 +42,7 @@ function NonprofitsContainer() {
     </li>
     );
   }
-  
+
   return (
     <div className="App">
       <div className="Header">

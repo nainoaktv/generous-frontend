@@ -16,10 +16,10 @@ const Profile = (props) => {
 
    const userData = user ?
    (<div>
-       <h1>Hey! {name}</h1>
-       <h2>Contact Information</h2>
-       <p>Email: {email}</p>
-       <h2>My Non-Profits</h2>
+       <h1 className="welcomeUser">Welcome to your GenProfile {name.toUpperCase()}</h1>
+       <h2 className="contactInfo">Contact Information</h2>
+       <p className="contactInfo">Email: {email}</p>
+       <h2><em>My Non-Profits</em></h2>
        {/* Display user non-profits here */}
    </div>) : <h2>Loading...</h2>
 
