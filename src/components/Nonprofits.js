@@ -6,8 +6,8 @@ function Nonprofits(props) {
         <div>
             <h1>{props.nonProfitsName}</h1>
             <p>{props.nonProfitsDesc}</p>
- 
         </div>
+ 
     )
 }
 

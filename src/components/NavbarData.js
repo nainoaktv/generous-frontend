@@ -14,13 +14,13 @@ export const authNavbarData = [
   },
   {
     title: 'Non-Profits',
-    path: '/nonprofits/results',
+    path: '/nonprofits',
     icon: <FaIcons.FaHands />,
     cName: 'nav-text'
   },
   {
     title: 'Profile',
-    path: '/profile',
+    path: '/users',
     icon: <BsIcons.BsFillPersonFill />,
     cName: 'nav-text'
   },

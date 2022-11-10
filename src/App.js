@@ -17,6 +17,7 @@ import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 import Nonprofits from './components/Nonprofits';
+import NonprofitsContainer from './components/NonprofitsContainer';
 
 // const axios = require('axios')
 // const apiKey = process.env.API_KEY;
@@ -85,7 +86,7 @@ function App() {
           />
           <PrivateRoute path="/users" component={Profile} user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={Welcome} />
-          <Route path="/nonprofits/results" component={Nonprofits} />
+          <Route path="/nonprofits" component={NonprofitsContainer} />
           <Route path="/about" component={About} />
         </Switch>
       </div>
